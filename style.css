@@ -1,0 +1,136 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #0f0f0f, #1c1f26, #23272f);
+    color: #e4e4e4;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+/* NAVBAR GLASS EFFECT */
+.navbar {
+    width: 100%;
+    padding: 20px 50px;
+    background: rgba(255, 255, 255, 0.06);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 20;
+}
+
+.navbar .logo {
+    font-size: 22px;
+    font-weight: 600;
+    background: linear-gradient(90deg, #00eaff, #007bff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* NAV MENU */
+.navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 35px;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: #e4e4e4;
+    font-weight: 400;
+    font-size: 16px;
+    transition: 0.3s;
+    position: relative;
+}
+
+.navbar ul li a::after {
+    content: "";
+    width: 0%;
+    height: 2px;
+    background: #00eaff;
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    transition: 0.3s ease-in-out;
+}
+
+.navbar ul li a:hover::after {
+    width: 100%;
+}
+
+.navbar ul li a:hover {
+    color: #00eaff;
+}
+
+/* HERO SECTION */
+.hero {
+    text-align: center;
+    padding: 120px 20px 100px;
+}
+
+.hero img {
+    width: 260px;
+    margin-bottom: 25px;
+    filter: drop-shadow(0 0 15px rgba(0, 234, 255, 0.4));
+    animation: float 3s ease-in-out infinite;
+}
+
+.hero h1 {
+    font-size: 46px;
+    font-weight: 700;
+    background: linear-gradient(90deg, #00d1ff, #007bff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 20px;
+    color: #c7c7c7;
+}
+
+/* FLOATING ANIMATION */
+@keyframes float {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0); }
+}
+
+/* FOOTER */
+footer {
+    margin-top: 100px;
+    padding: 50px 20px;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+footer h1, footer h2, footer h3 {
+    margin: 5px 0;
+    background: linear-gradient(90deg, #00eaff, #007bff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 600;
+}
+
+footer p {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #bbbbbb;
+    opacity: 0.8;
+}
+
+/* SMOOTH SCROLL */
+html {
+    scroll-behavior: smooth;
+}
